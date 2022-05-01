@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/script.js" type="text/javascript"></script>
+    <title>Tabelas</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        table {
+            width: 500px;
+            border-collapse: collapse;
+            position: relative;
+        }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        thead, tfoot {
+            background-color: rgb(75, 75, 75);
+            color: white;
+        }
+
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: rgb(75, 75, 75);
+            border: 1px solid black;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 37px;
+            background-color: rgb(75, 75, 75);
+            color: white;
+            border: 1px solid black;
+        }
+
+        .num {
+            text-align: right;
+        }
+
+        tbody > tr:nth-child(2n-1) {
+            background-color: white;
+        }
+
+        tbody > tr:nth-child(2n) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Uso de tabelas grandes</h1>
+    <!--
+        ANATOMIA PARA TABELAS GRANDES
+        TABLE
+            CAPTION
+            THEAD
+                TR, TD, TH
+            TBODY
+                TR, TD, TH
+            TFOOT
+                TR, TD, TH
+    -->
+    <button id="myButton">Mostrar/Esconder Tabela</button>
+    <script type="text/javascript">
+        document.getElementById('myButton').addEventListener('click', toggleTable);
+    </script>
+    <div id='demo'></div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut sit! Iusto corrupti amet soluta beatae exercitationem ut expedita deserunt, non at facilis possimus unde voluptatum accusamus neque! Possimus, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere doloribus voluptates, iste delectus facilis, sunt, id nihil minima non harum inventore fugit est modi odit quos dolore corrupti veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas, qui obcaecati ad adipisci, dignissimos aspernatur facere laboriosam ut quam quaerat aliquid excepturi fugiat, nemo molestias ullam itaque ex! Enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, iusto earum necessitatibus consequuntur maxime autem. Doloremque architecto aperiam quos, ut voluptates beatae! Natus deserunt odit sint, sapiente harum non maxime.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut sit! Iusto corrupti amet soluta beatae exercitationem ut expedita deserunt, non at facilis possimus unde voluptatum accusamus neque! Possimus, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere doloribus voluptates, iste delectus facilis, sunt, id nihil minima non harum inventore fugit est modi odit quos dolore corrupti veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas, qui obcaecati ad adipisci, dignissimos aspernatur facere laboriosam ut quam quaerat aliquid excepturi fugiat, nemo molestias ullam itaque ex! Enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, iusto earum necessitatibus consequuntur maxime autem. Doloremque architecto aperiam quos, ut voluptates beatae! Natus deserunt odit sint, sapiente harum non maxime.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut sit! Iusto corrupti amet soluta beatae exercitationem ut expedita deserunt, non at facilis possimus unde voluptatum accusamus neque! Possimus, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere doloribus voluptates, iste delectus facilis, sunt, id nihil minima non harum inventore fugit est modi odit quos dolore corrupti veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas, qui obcaecati ad adipisci, dignissimos aspernatur facere laboriosam ut quam quaerat aliquid excepturi fugiat, nemo molestias ullam itaque ex! Enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, iusto earum necessitatibus consequuntur maxime autem. Doloremque architecto aperiam quos, ut voluptates beatae! Natus deserunt odit sint, sapiente harum non maxime.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut sit! Iusto corrupti amet soluta beatae exercitationem ut expedita deserunt, non at facilis possimus unde voluptatum accusamus neque! Possimus, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere doloribus voluptates, iste delectus facilis, sunt, id nihil minima non harum inventore fugit est modi odit quos dolore corrupti veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas, qui obcaecati ad adipisci, dignissimos aspernatur facere laboriosam ut quam quaerat aliquid excepturi fugiat, nemo molestias ullam itaque ex! Enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, iusto earum necessitatibus consequuntur maxime autem. Doloremque architecto aperiam quos, ut voluptates beatae! Natus deserunt odit sint, sapiente harum non maxime.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut sit! Iusto corrupti amet soluta beatae exercitationem ut expedita deserunt, non at facilis possimus unde voluptatum accusamus neque! Possimus, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere doloribus voluptates, iste delectus facilis, sunt, id nihil minima non harum inventore fugit est modi odit quos dolore corrupti veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas, qui obcaecati ad adipisci, dignissimos aspernatur facere laboriosam ut quam quaerat aliquid excepturi fugiat, nemo molestias ullam itaque ex! Enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, iusto earum necessitatibus consequuntur maxime autem. Doloremque architecto aperiam quos, ut voluptates beatae! Natus deserunt odit sint, sapiente harum non maxime.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, aut sit! Iusto corrupti amet soluta beatae exercitationem ut expedita deserunt, non at facilis possimus unde voluptatum accusamus neque! Possimus, aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias facere doloribus voluptates, iste delectus facilis, sunt, id nihil minima non harum inventore fugit est modi odit quos dolore corrupti veniam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis quas, qui obcaecati ad adipisci, dignissimos aspernatur facere laboriosam ut quam quaerat aliquid excepturi fugiat, nemo molestias ullam itaque ex! Enim? Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, iusto earum necessitatibus consequuntur maxime autem. Doloremque architecto aperiam quos, ut voluptates beatae! Natus deserunt odit sint, sapiente harum non maxime.</p>
+</body>
+</html>
