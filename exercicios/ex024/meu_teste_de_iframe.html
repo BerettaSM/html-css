@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de iFrame</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        iframe {
+            display: block;
+            background-color: lightgray;
+            margin: auto;
+            height: 600px;
+            width: 1000px;
+        }
+
+        div#btns {
+            margin: 20px auto;
+            width: 450px;
+            height: 80px;
+        }
+
+        button {
+            width: 150px;
+            height: 40px;
+        }
+
+    </style>
+    <script type="text/javascript">
+        function populateButtons() {
+            var target = window.document.getElementById("btns");
+            var regex = /^[^.]+(?=\.html)/;
+            var partialLink = "/exercicios/ex022/";
+            var pages = [
+                "fundo001.html",
+                "fundo002.html",
+                "fundo003.html",
+                "fundo004.html",
+                "fundo005.html",
+                "fundo006.html"
+            ];
+
+            pages.forEach(page => {
+                let url = partialLink.concat(page);
+                let child = document.createElement('button');
+                child.innerText = page.match(regex)[0].toUpperCase();
+                child.addEventListener("click", () => {
+                    const i = document.getElementById("meu_iframe");
+                    i.setAttribute("src", url);
+                })
+                target.appendChild(child);
+            })
+        }
+    </script>
+</head>
+<body onload="populateButtons()">
+    <h1>Teste de iFrame</h1>
+
+    <iframe id="meu_iframe" frameborder="0" scrolling="no"></iframe>
+
+    <div id="btns"></div>
+
+</body>
+</html>
